@@ -1,8 +1,8 @@
 package edu.odu.cs.tkennedy.itertools;
 
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
 import java.util.Iterator;
+import java.lang.reflect.Method;
+import java.lang.reflect.InvocationTargetException;
 
 public class Cloned
 {
