@@ -89,6 +89,7 @@ public class TestCloned
             new Datum("cloned"),
             new Datum("!!!!")
         );
+        Iterator<Datum> srcIt = srcWords.iterator();
 
         Iterable<Datum> clonedData = cloned(srcWords);
         Iterator<Datum> clonedIt = clonedData.iterator();
@@ -98,21 +99,26 @@ public class TestCloned
         assertThat(clonedIt.hasNext(), is(true));
         actual = clonedIt.next();
         assertThat(actual, is(equalTo("Rust")));
+        assertThat(actual, not(sameInstance(srcIt.next())));
 
         assertThat(clonedIt.hasNext(), is(true));
         actual = clonedIt.next();
         assertThat(actual, is(equalTo("already")));
+        assertThat(actual, not(sameInstance(srcIt.next())));
 
         assertThat(clonedIt.hasNext(), is(true));
         actual = clonedIt.next();
         assertThat(actual, is(equalTo("has")));
+        assertThat(actual, not(sameInstance(srcIt.next())));
 
         assertThat(clonedIt.hasNext(), is(true));
         actual = clonedIt.next();
         assertThat(actual, is(equalTo("cloned")));
+        assertThat(actual, not(sameInstance(srcIt.next())));
 
         assertThat(clonedIt.hasNext(), is(true));
         actual = clonedIt.next();
         assertThat(actual, is(equalTo("!!!!")));
+        assertThat(actual, not(sameInstance(srcIt.next())));
     }
 }
