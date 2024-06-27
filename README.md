@@ -84,7 +84,7 @@ The Java form of the loop should take a form similiar to...
 
 ```java
 for (Zipped.Tuple tuple : zip(lhsCollection, rhsCollection)) {
-    System.out.printf("(%s, %s)", tuple.getValueAt(0), tuple.getValueAt(1));
+    System.out.printf("(%s, %s)%n", tuple.getValueAt(0), tuple.getValueAt(1));
 }
 ```
 
@@ -97,6 +97,29 @@ should be thrown.
 ## Generalized zip
 
 Extend `zip` to work with an arbitrary number of `Iterable`s. 
+
+
+## chain
+
+Implement the Python `chain` function which allows mutiple `Iterable`s to be
+traversed as if they are one collection.
+
+For example...
+
+```python
+for val chain(collection_1, collection_2):
+    print(f"{val}")
+```
+
+### Intended Java Chain-Loop
+
+The Java form of the loop should take a form similiar to...
+
+```java
+for (T value : zip(lhsCollection, rhsCollection)) {
+    System.out.printf("%s%n", value);
+}
+```
 
 
 # Notes
