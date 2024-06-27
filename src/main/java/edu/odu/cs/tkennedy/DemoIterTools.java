@@ -8,9 +8,9 @@ import static edu.odu.cs.tkennedy.itertools.Cloned.cloned;
 
 public class DemoIterTools
 {
-    private static class Datum implements Cloneable
+    public static class Datum implements Cloneable
     {
-        private int value;
+        public int value;
 
         public Datum(int val)
         {
@@ -41,6 +41,8 @@ public class DemoIterTools
 
         for (Datum dup : cloned(someCollection)) {
             dupes.add(dup);
+
+            System.out.printf("Duplicate is Datum(%d)%n", dup.value);
         }
     }
 }
