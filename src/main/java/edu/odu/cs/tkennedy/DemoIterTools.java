@@ -1,4 +1,4 @@
-package edu.odu.cs.tkennedy
+package edu.odu.cs.tkennedy;
 
 import java.util.Arrays;
 import java.util.List;
@@ -39,7 +39,7 @@ public class DemoIterTools
 
         List<Datum> dupes = new ArrayList<>();
 
-        for (Datum value : cloned(someCollection)) {
+        for (Datum dup : cloned(someCollection)) {
             dupes.add(dup);
         }
     }
